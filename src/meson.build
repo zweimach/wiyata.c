@@ -1,0 +1,1 @@
+subdir('open_kattis')
