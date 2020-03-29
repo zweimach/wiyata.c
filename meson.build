@@ -6,6 +6,9 @@ project('wiyata',
     default_options: ['c_std=c11', 'default_library=static']
 )
 
-dep_cmocka = subproject('cmocka').get_variable('dep_cmocka')
+cc = meson.get_compiler('c')
+dep_m = cc.find_library('m', required : false)
+
+dep_cmocka = subproject('cmocka').get_variable('cmocka_dep')
 
 subdir('src')
