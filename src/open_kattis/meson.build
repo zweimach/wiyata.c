@@ -1,3 +1,6 @@
 subdir('autori')
 subdir('fizzbuzz')
+subdir('herman')
+subdir('planina')
+subdir('take_two_stones')
 subdir('to_lower')

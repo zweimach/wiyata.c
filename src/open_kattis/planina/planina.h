@@ -1,0 +1,6 @@
+#ifndef WIYATA_OPEN_KATTIS_PLANINA_H
+#define WIYATA_OPEN_KATTIS_PLANINA_H
+
+int planina(int n);
+
+#endif /* WIYATA_OPEN_KATTIS_PLANINA_H */
