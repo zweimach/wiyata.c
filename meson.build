@@ -12,3 +12,4 @@ dep_m = cc.find_library('m', required : false)
 dep_cmocka = subproject('cmocka').get_variable('cmocka_dep')
 
 subdir('src')
+subdir('tests')

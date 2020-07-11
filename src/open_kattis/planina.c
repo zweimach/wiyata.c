@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <math.h>
 
+#include "planina.h"
+
 int planina(int n)
 {
     int i = 2;
