@@ -15,6 +15,13 @@ dep_batter_up = declare_dependency(
     link_with: lib_batter_up,
     include_directories: includes)
 
+lib_death_knight_hero = library('death_knight_hero',
+    sources: 'death_knight_hero.c')
+
+dep_death_knight_hero = declare_dependency(
+    link_with: lib_death_knight_hero,
+    include_directories: includes)
+
 lib_fizzbuzz = library('fizzbuzz',
     sources: 'fizzbuzz.c')
 
@@ -28,6 +35,13 @@ lib_herman = library('herman',
 
 dep_herman = declare_dependency(
     link_with: lib_herman,
+    include_directories: includes)
+
+lib_oddities = library('oddities',
+    sources: 'oddities.c')
+
+dep_oddities = declare_dependency(
+    link_with: lib_oddities,
     include_directories: includes)
 
 lib_planina = library('planina',
@@ -66,4 +80,12 @@ lib_to_lower = library('to_lower',
 
 dep_to_lower = declare_dependency(
     link_with: lib_to_lower,
+    include_directories: includes)
+
+lib_zamka = library('zamka',
+    sources: 'zamka.c',
+    dependencies: dep_m)
+
+dep_zamka = declare_dependency(
+    link_with: lib_zamka,
     include_directories: includes)

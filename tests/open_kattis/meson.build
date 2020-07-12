@@ -10,6 +10,12 @@ test_batter_up = executable('batter_up_test',
 
 test('open_kattis batter_up', test_batter_up)
 
+test_death_knight_hero = executable('death_knight_hero_test',
+    sources: 'death_knight_hero-test.c',
+    dependencies: [dep_cmocka, dep_death_knight_hero])
+
+test('open_kattis death_knight_hero', test_death_knight_hero)
+
 test_fizzbuzz = executable('fizzbuzz_test',
     sources: 'fizzbuzz-test.c',
     dependencies: [dep_cmocka, dep_fizzbuzz])
@@ -21,6 +27,12 @@ test_herman = executable('herman_test',
     dependencies: [dep_cmocka, dep_herman])
 
 test('open_kattis herman', test_herman)
+
+test_oddities = executable('oddities_test',
+    sources: 'oddities-test.c',
+    dependencies: [dep_cmocka, dep_oddities])
+
+test('open_kattis oddities', test_oddities)
 
 test_planina = executable('planina_test',
     sources: 'planina-test.c',
@@ -51,3 +63,9 @@ test_to_lower = executable('to_lower_test',
     dependencies: [dep_cmocka, dep_to_lower])
 
 test('open_kattis to_lower', test_to_lower)
+
+test_zamka = executable('zamka_test',
+    sources: 'zamka-test.c',
+    dependencies: [dep_cmocka, dep_zamka])
+
+test('open_kattis zamka', test_zamka)
