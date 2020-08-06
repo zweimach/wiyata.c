@@ -22,6 +22,12 @@ test_fizzbuzz = executable('fizzbuzz_test',
 
 test('open_kattis fizzbuzz', test_fizzbuzz)
 
+test_ladder = executable('ladder_test',
+    sources: 'ladder-test.c',
+    dependencies: [dep_cmocka, dep_ladder])
+
+test('open_kattis ladder', test_ladder)
+
 test_herman = executable('herman_test',
     sources: 'herman-test.c',
     dependencies: [dep_cmocka, dep_herman])
@@ -46,6 +52,12 @@ test_pot = executable('pot_test',
 
 test('open_kattis pot', test_pot)
 
+test_quick_brown_fox = executable('quick_brown_fox_test',
+    sources: 'quick_brown_fox-test.c',
+    dependencies: [dep_cmocka, dep_quick_brown_fox])
+
+test('open_kattis quick_brown_fox', test_quick_brown_fox)
+
 test_reversed_binary_numbers = executable('reversed_binary_numbers_test',
     sources: 'reversed_binary_numbers-test.c',
     dependencies: [dep_cmocka, dep_reversed_binary_numbers])
@@ -57,6 +69,12 @@ test_take_two_stones = executable('take_two_stones_test',
     dependencies: [dep_cmocka, dep_take_two_stones])
 
 test('open_kattis take_two_stones', test_take_two_stones)
+
+test_tarifa = executable('tarifa_test',
+    sources: 'tarifa-test.c',
+    dependencies: [dep_cmocka, dep_tarifa])
+
+test('open_kattis tarifa', test_tarifa)
 
 test_to_lower = executable('to_lower_test',
     sources: 'to_lower-test.c',

@@ -29,6 +29,14 @@ dep_fizzbuzz = declare_dependency(
     link_with: lib_fizzbuzz,
     include_directories: includes)
 
+lib_ladder = library('ladder',
+    sources: 'ladder.c',
+    dependencies: dep_m)
+
+dep_ladder = declare_dependency(
+    link_with: lib_ladder,
+    include_directories: includes)
+
 lib_herman = library('herman',
     sources: 'herman.c',
     dependencies: dep_m)
@@ -60,6 +68,13 @@ dep_pot = declare_dependency(
     link_with: lib_pot,
     include_directories: includes)
 
+lib_quick_brown_fox = library('quick_brown_fox',
+    sources: 'quick_brown_fox.c')
+
+dep_quick_brown_fox = declare_dependency(
+    link_with: lib_quick_brown_fox,
+    include_directories: includes)
+
 lib_reversed_binary_numbers = library('reversed_binary_numbers',
     sources: 'reversed_binary_numbers.c',
     dependencies: dep_m)
@@ -73,6 +88,13 @@ lib_take_two_stones = library('take_two_stones',
 
 dep_take_two_stones = declare_dependency(
     link_with: lib_take_two_stones,
+    include_directories: includes)
+
+lib_tarifa = library('tarifa',
+    sources: 'tarifa.c')
+
+dep_tarifa = declare_dependency(
+    link_with: lib_tarifa,
     include_directories: includes)
 
 lib_to_lower = library('to_lower',
