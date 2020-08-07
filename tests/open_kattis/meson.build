@@ -16,6 +16,12 @@ test_death_knight_hero = executable('death_knight_hero_test',
 
 test('open_kattis death_knight_hero', test_death_knight_hero)
 
+test_faktor = executable('faktor_test',
+    sources: 'faktor-test.c',
+    dependencies: [dep_cmocka, dep_faktor])
+
+test('open_kattis faktor', test_faktor)
+
 test_fizzbuzz = executable('fizzbuzz_test',
     sources: 'fizzbuzz-test.c',
     dependencies: [dep_cmocka, dep_fizzbuzz])
@@ -52,6 +58,12 @@ test_pot = executable('pot_test',
 
 test('open_kattis pot', test_pot)
 
+test_r2 = executable('r2_test',
+    sources: 'r2-test.c',
+    dependencies: [dep_cmocka, dep_r2])
+
+test('open_kattis r2', test_r2)
+
 test_quick_brown_fox = executable('quick_brown_fox_test',
     sources: 'quick_brown_fox-test.c',
     dependencies: [dep_cmocka, dep_quick_brown_fox])
@@ -63,6 +75,12 @@ test_reversed_binary_numbers = executable('reversed_binary_numbers_test',
     dependencies: [dep_cmocka, dep_reversed_binary_numbers])
 
 test('open_kattis reversed_binary_numbers', test_reversed_binary_numbers)
+
+test_stuck_in_a_time_loop = executable('stuck_in_a_time_loop_test',
+    sources: 'stuck_in_a_time_loop-test.c',
+    dependencies: [dep_cmocka, dep_stuck_in_a_time_loop])
+
+test('open_kattis stuck_in_a_time_loop', test_stuck_in_a_time_loop)
 
 test_take_two_stones = executable('take_two_stones_test',
     sources: 'take_two_stones-test.c',
@@ -81,6 +99,12 @@ test_to_lower = executable('to_lower_test',
     dependencies: [dep_cmocka, dep_to_lower])
 
 test('open_kattis to_lower', test_to_lower)
+
+test_trik = executable('trik_test',
+    sources: 'trik-test.c',
+    dependencies: [dep_cmocka, dep_trik])
+
+test('open_kattis trik', test_trik)
 
 test_zamka = executable('zamka_test',
     sources: 'zamka-test.c',

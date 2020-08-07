@@ -22,6 +22,13 @@ dep_death_knight_hero = declare_dependency(
     link_with: lib_death_knight_hero,
     include_directories: includes)
 
+lib_faktor = library('faktor',
+    sources: 'faktor.c')
+
+dep_faktor = declare_dependency(
+    link_with: lib_faktor,
+    include_directories: includes)
+
 lib_fizzbuzz = library('fizzbuzz',
     sources: 'fizzbuzz.c')
 
@@ -68,6 +75,13 @@ dep_pot = declare_dependency(
     link_with: lib_pot,
     include_directories: includes)
 
+lib_r2 = library('r2',
+    sources: 'r2.c')
+
+dep_r2 = declare_dependency(
+    link_with: lib_r2,
+    include_directories: includes)
+
 lib_quick_brown_fox = library('quick_brown_fox',
     sources: 'quick_brown_fox.c')
 
@@ -81,6 +95,13 @@ lib_reversed_binary_numbers = library('reversed_binary_numbers',
 
 dep_reversed_binary_numbers = declare_dependency(
     link_with: lib_reversed_binary_numbers,
+    include_directories: includes)
+
+lib_stuck_in_a_time_loop = library('stuck_in_a_time_loop',
+    sources: 'stuck_in_a_time_loop.c')
+
+dep_stuck_in_a_time_loop = declare_dependency(
+    link_with: lib_stuck_in_a_time_loop,
     include_directories: includes)
 
 lib_take_two_stones = library('take_two_stones',
@@ -102,6 +123,13 @@ lib_to_lower = library('to_lower',
 
 dep_to_lower = declare_dependency(
     link_with: lib_to_lower,
+    include_directories: includes)
+
+lib_trik = library('trik',
+    sources: 'trik.c')
+
+dep_trik = declare_dependency(
+    link_with: lib_trik,
     include_directories: includes)
 
 lib_zamka = library('zamka',
