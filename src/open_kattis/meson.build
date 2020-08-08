@@ -44,6 +44,20 @@ dep_ladder = declare_dependency(
     link_with: lib_ladder,
     include_directories: includes)
 
+lib_modulo = library('modulo',
+    sources: 'modulo.c')
+
+dep_modulo = declare_dependency(
+    link_with: lib_modulo,
+    include_directories: includes)
+
+lib_nasty_hacks = library('nasty_hacks',
+    sources: 'nasty_hacks.c')
+
+dep_nasty_hacks = declare_dependency(
+    link_with: lib_nasty_hacks,
+    include_directories: includes)
+
 lib_herman = library('herman',
     sources: 'herman.c',
     dependencies: dep_m)
@@ -73,6 +87,14 @@ lib_pot = library('pot',
 
 dep_pot = declare_dependency(
     link_with: lib_pot,
+    include_directories: includes)
+
+lib_quadrant_selection = library('quadrant_selection',
+    sources: 'quadrant_selection.c',
+    dependencies: dep_m)
+
+dep_quadrant_selection = declare_dependency(
+    link_with: lib_quadrant_selection,
     include_directories: includes)
 
 lib_r2 = library('r2',

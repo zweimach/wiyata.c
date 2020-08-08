@@ -34,6 +34,18 @@ test_ladder = executable('ladder_test',
 
 test('open_kattis ladder', test_ladder)
 
+test_modulo = executable('modulo_test',
+    sources: 'modulo-test.c',
+    dependencies: [dep_cmocka, dep_modulo])
+
+test('open_kattis modulo', test_modulo)
+
+test_nasty_hacks = executable('nasty_hacks_test',
+    sources: 'nasty_hacks-test.c',
+    dependencies: [dep_cmocka, dep_nasty_hacks])
+
+test('open_kattis nasty_hacks', test_nasty_hacks)
+
 test_herman = executable('herman_test',
     sources: 'herman-test.c',
     dependencies: [dep_cmocka, dep_herman])
@@ -57,6 +69,12 @@ test_pot = executable('pot_test',
     dependencies: [dep_cmocka, dep_pot])
 
 test('open_kattis pot', test_pot)
+
+test_quadrant_selection = executable('quadrant_selection_test',
+    sources: 'quadrant_selection-test.c',
+    dependencies: [dep_cmocka, dep_quadrant_selection])
+
+test('open_kattis quadrant_selection', test_quadrant_selection)
 
 test_r2 = executable('r2_test',
     sources: 'r2-test.c',

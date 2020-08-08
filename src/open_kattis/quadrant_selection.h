@@ -1,0 +1,6 @@
+#ifndef WIYATA_OPEN_KATTIS_QUADRANT_SELECTION_H
+#define WIYATA_OPEN_KATTIS_QUADRANT_SELECTION_H
+
+unsigned quadrant_selection(int x, int y);
+
+#endif /* WIYATA_OPEN_KATTIS_QUADRANT_SELECTION_H */
