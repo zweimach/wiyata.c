@@ -10,6 +10,18 @@ test_batter_up = executable('batter_up_test',
 
 test('open_kattis batter_up', test_batter_up)
 
+test_bijele = executable('bijele_test',
+    sources: 'bijele-test.c',
+    dependencies: [dep_cmocka, dep_bijele])
+
+test('open_kattis bijele', test_bijele)
+
+test_cold_puter_science = executable('cold_puter_science_test',
+    sources: 'cold_puter_science-test.c',
+    dependencies: [dep_cmocka, dep_cold_puter_science])
+
+test('open_kattis cold_puter_science', test_cold_puter_science)
+
 test_death_knight_hero = executable('death_knight_hero_test',
     sources: 'death_knight_hero-test.c',
     dependencies: [dep_cmocka, dep_death_knight_hero])
@@ -51,6 +63,12 @@ test_herman = executable('herman_test',
     dependencies: [dep_cmocka, dep_herman])
 
 test('open_kattis herman', test_herman)
+
+test_number_fun = executable('number_fun_test',
+    sources: 'number_fun-test.c',
+    dependencies: [dep_cmocka, dep_number_fun])
+
+test('open_kattis number_fun', test_number_fun)
 
 test_oddities = executable('oddities_test',
     sources: 'oddities-test.c',

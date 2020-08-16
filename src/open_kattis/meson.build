@@ -15,6 +15,20 @@ dep_batter_up = declare_dependency(
     link_with: lib_batter_up,
     include_directories: includes)
 
+lib_bijele = library('bijele',
+    sources: 'bijele.c')
+
+dep_bijele = declare_dependency(
+    link_with: lib_bijele,
+    include_directories: includes)
+
+lib_cold_puter_science = library('cold_puter_science',
+    sources: 'cold_puter_science.c')
+
+dep_cold_puter_science = declare_dependency(
+    link_with: lib_cold_puter_science,
+    include_directories: includes)
+
 lib_death_knight_hero = library('death_knight_hero',
     sources: 'death_knight_hero.c')
 
@@ -64,6 +78,13 @@ lib_herman = library('herman',
 
 dep_herman = declare_dependency(
     link_with: lib_herman,
+    include_directories: includes)
+
+lib_number_fun = library('number_fun',
+    sources: 'number_fun.c')
+
+dep_number_fun = declare_dependency(
+    link_with: lib_number_fun,
     include_directories: includes)
 
 lib_oddities = library('oddities',
