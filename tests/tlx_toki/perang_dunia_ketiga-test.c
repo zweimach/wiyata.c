@@ -1,48 +1,49 @@
+#include <setjmp.h>
 #include <stdarg.h>
 #include <stddef.h>
-#include <setjmp.h>
+
 #include <cmocka.h>
 
 #include "perang_dunia_ketiga.h"
 
-static void test_two_invasions(void **state)
+static void test_two_invasions(void** state)
 {
     (void)state;
 
-    int input[] = {7, 31};
-    int result = perang_dunia_ketiga(input, 2);
+    unsigned input[] = {7, 31};
+    unsigned result = perang_dunia_ketiga(2, input);
     assert_int_equal(result, 2);
 }
 
-static void test_three_invasions(void **state)
+static void test_three_invasions(void** state)
 {
     (void)state;
 
-    int input[] = {4, 8, 2};
-    int result = perang_dunia_ketiga(input, 3);
+    unsigned input[] = {4, 8, 2};
+    unsigned result = perang_dunia_ketiga(3, input);
     assert_int_equal(result, 0);
 }
 
-static void test_many_invasions(void **state)
+static void test_many_invasions(void** state)
 {
     (void)state;
 
     {
-        int input[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-        int result = perang_dunia_ketiga(input, 10);
+        unsigned input[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+        unsigned result = perang_dunia_ketiga(10, input);
         assert_int_equal(result, 20);
     }
 
     {
-        int input[] = {7, 7, 7, 7, 2, 4, 4, 4, 7, 7, 7, 7};
-        int result = perang_dunia_ketiga(input, 12);
+        unsigned input[] = {7, 7, 7, 7, 2, 4, 4, 4, 7, 7, 7, 7};
+        unsigned result = perang_dunia_ketiga(12, input);
         assert_int_equal(result, 8);
     }
 }
 
 int main()
 {
-    const struct CMUnitTest tests[] = {cmocka_unit_test(test_two_invasions),
+    struct CMUnitTest const tests[] = {cmocka_unit_test(test_two_invasions),
                                        cmocka_unit_test(test_three_invasions),
                                        cmocka_unit_test(test_many_invasions)};
 

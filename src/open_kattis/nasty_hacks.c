@@ -3,10 +3,10 @@
 
 #include "nasty_hacks.h"
 
-char const **nasty_hacks(unsigned n, unsigned input[n][3])
+char const** nasty_hacks(unsigned n, unsigned input[n][3])
 {
     enum { r, e, c };
-    char **result = malloc(sizeof(char *) * n);
+    char** result = malloc(sizeof(char*) * n);
 
     for (int i = 0; i < n; i++) {
         result[i] = malloc(sizeof(char) * 18);
@@ -17,5 +17,5 @@ char const **nasty_hacks(unsigned n, unsigned input[n][3])
         else
             sprintf(result[i], "does not matter");
     }
-    return (char const **)result;
+    return (char const**)result;
 }

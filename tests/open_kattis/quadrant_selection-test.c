@@ -1,12 +1,13 @@
-#include <stdarg.h>
-#include <stdlib.h>
-#include <stddef.h>
 #include <setjmp.h>
+#include <stdarg.h>
+#include <stddef.h>
+#include <stdlib.h>
+
 #include <cmocka.h>
 
 #include "quadrant_selection.h"
 
-static void first_test(void **state)
+static void first_test(void** state)
 {
     (void)state;
 
@@ -14,7 +15,7 @@ static void first_test(void **state)
     assert_int_equal(result, 1);
 }
 
-static void second_test(void **state)
+static void second_test(void** state)
 {
     (void)state;
 
@@ -24,7 +25,7 @@ static void second_test(void **state)
 
 int main()
 {
-    const struct CMUnitTest tests[] = {cmocka_unit_test(first_test),
+    struct CMUnitTest const tests[] = {cmocka_unit_test(first_test),
                                        cmocka_unit_test(second_test)};
 
     return cmocka_run_group_tests(tests, NULL, NULL);

@@ -1,11 +1,11 @@
-#include <stdio.h>
-#include <stdbool.h>
-#include <string.h>
 #include <ctype.h>
+#include <stdbool.h>
+#include <stdio.h>
+#include <string.h>
 
 #include "to_lower.h"
 
-int to_lower(char ***str_list, int cases, int data)
+int to_lower(char*** str_list, int cases, int data)
 {
     int result = 0;
 

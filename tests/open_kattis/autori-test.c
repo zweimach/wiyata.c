@@ -1,32 +1,33 @@
-#include <stdarg.h>
-#include <stdlib.h>
-#include <stddef.h>
 #include <setjmp.h>
+#include <stdarg.h>
+#include <stddef.h>
+#include <stdlib.h>
+
 #include <cmocka.h>
 
 #include "autori.h"
 
-static void test_two_names(void **state)
+static void test_two_names(void** state)
 {
     (void)state;
 
-    const char *result = autori("Knuth-Morris-Pratt");
+    char const* result = autori("Knuth-Morris-Pratt");
     assert_string_equal(result, "KMP");
-    free((void *)result);
+    free((void*)result);
 }
 
-static void test_three_names(void **state)
+static void test_three_names(void** state)
 {
     (void)state;
 
-    const char *result = autori("Mirko-Slavko");
+    char const* result = autori("Mirko-Slavko");
     assert_string_equal(result, "MS");
-    free((void *)result);
+    free((void*)result);
 }
 
 int main()
 {
-    const struct CMUnitTest tests[] = {cmocka_unit_test(test_two_names),
+    struct CMUnitTest const tests[] = {cmocka_unit_test(test_two_names),
                                        cmocka_unit_test(test_three_names)};
 
     return cmocka_run_group_tests(tests, NULL, NULL);

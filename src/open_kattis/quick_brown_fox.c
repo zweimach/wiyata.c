@@ -1,14 +1,14 @@
 #include <ctype.h>
+#include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdbool.h>
 #include <string.h>
 
 #include "quick_brown_fox.h"
 
-char const **quick_brown_fox(int n, char const *input[n])
+char const** quick_brown_fox(int n, char const* input[n])
 {
-    char **result = malloc(sizeof(char *) * n);
+    char** result = malloc(sizeof(char*) * n);
 
     for (int i = 0; i < n; i++) {
         bool pangram[] = {[25] = false};
@@ -36,5 +36,5 @@ char const **quick_brown_fox(int n, char const *input[n])
             sprintf(result[i], "pangram");
         }
     }
-    return (char const **)result;
+    return (char const**)result;
 }

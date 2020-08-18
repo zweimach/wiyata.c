@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int tarifa(int x, int n, int *p)
+int tarifa(int x, int n, int* p)
 {
     int total = x * (n + 1);
 

@@ -10,11 +10,11 @@ unsigned sum_of_digits(int value)
     return (value % 10) + sum_of_digits(value / 10);
 }
 
-unsigned *zamka(unsigned min, unsigned max, unsigned target)
+unsigned* zamka(unsigned min, unsigned max, unsigned target)
 {
     unsigned index = 0;
-    unsigned *arr = malloc(sizeof(unsigned) * max);
-    unsigned *result = malloc(sizeof(unsigned) * 2);
+    unsigned* arr = malloc(sizeof(unsigned) * max);
+    unsigned* result = malloc(sizeof(unsigned) * 2);
 
     for (int i = min; i <= max; i++) {
         unsigned sod = sum_of_digits(i);

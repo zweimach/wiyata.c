@@ -1,19 +1,18 @@
 #include "perang_dunia_ketiga.h"
 
-int perang_dunia_ketiga(int laser_powers[], int invasions)
+unsigned perang_dunia_ketiga(unsigned n, unsigned input[n])
 {
-    int remains = 0;
-    int min_power = 1;
+    unsigned result = 0;
+    long min_power = 1;
 
-    for (int i = 0; i < invasions; i++) {
-        while (min_power - laser_powers[i] < 0) {
+    for (unsigned i = 0; i < n; i++) {
+        while (min_power - input[i] < 0) {
             min_power *= 2;
         }
-        if (laser_powers[i] > 0) {
-            remains += min_power - laser_powers[i];
+        if (input[i] > 0) {
+            result += min_power - input[i];
         }
         min_power = 1;
     }
-
-    return remains;
+    return result;
 }

@@ -4,9 +4,9 @@
 
 #include "fizzbuzz.h"
 
-const char *fizzbuzz(int x, int y, int n)
+char const* fizzbuzz(int x, int y, int n)
 {
-    char *result = malloc(n * 10 * sizeof(char));
+    char* result = malloc(n * 10 * sizeof(char));
     result[0] = '\0';
 
     for (int m = 1; m <= n; m++) {

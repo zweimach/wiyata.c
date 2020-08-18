@@ -3,7 +3,7 @@
 
 #include "trik.h"
 
-unsigned trik(char const *const input)
+unsigned trik(char const* const input)
 {
     unsigned result;
     bool cups[] = {true, false, false};

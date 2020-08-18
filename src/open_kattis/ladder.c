@@ -3,7 +3,7 @@
 
 #include "ladder.h"
 
-static const double PI = 3.14159265358979323846;
+static double const PI = 3.14159265358979323846;
 
 static double sind(unsigned angle)
 {

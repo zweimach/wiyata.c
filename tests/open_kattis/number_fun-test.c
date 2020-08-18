@@ -1,12 +1,13 @@
-#include <stdarg.h>
-#include <stdlib.h>
-#include <stddef.h>
 #include <setjmp.h>
+#include <stdarg.h>
+#include <stddef.h>
+#include <stdlib.h>
+
 #include <cmocka.h>
 
 #include "number_fun.h"
 
-static void first_test(void **state)
+static void first_test(void** state)
 {
     (void)state;
 
@@ -18,7 +19,7 @@ static void first_test(void **state)
         {7, 2, 14},
         {12, 4, 2},
     };
-    char const *expect[] = {
+    char const* expect[] = {
         "Possible",
         "Possible",
         "Impossible",
@@ -26,19 +27,19 @@ static void first_test(void **state)
         "Possible",
         "Impossible",
     };
-    char const **result = number_fun(6, input);
+    char const** result = number_fun(6, input);
     for (int i = 0; i < 6; i++) {
         assert_string_equal(result[i], expect[i]);
     }
     for (int i = 0; i < 6; i++) {
-        free((void *)result[i]);
+        free((void*)result[i]);
     }
-    free((void *)result);
+    free((void*)result);
 }
 
 int main()
 {
-    const struct CMUnitTest tests[] = {cmocka_unit_test(first_test)};
+    struct CMUnitTest const tests[] = {cmocka_unit_test(first_test)};
 
     return cmocka_run_group_tests(tests, NULL, NULL);
 }

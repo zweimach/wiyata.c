@@ -3,13 +3,13 @@
 
 #include "number_fun.h"
 
-char const **number_fun(unsigned n, unsigned input[n][3])
+char const** number_fun(unsigned n, unsigned input[n][3])
 {
     enum { a, b, c };
-    char **result = malloc(sizeof(char *) * n);
+    char** result = malloc(sizeof(char*) * n);
 
     for (int i = 0; i < n; i++) {
-        unsigned *op = input[i];
+        unsigned* op = input[i];
         result[i] = malloc(sizeof(char) * 12);
         if (op[a] + op[b] == op[c] || op[a] - op[b] == op[c]
             || op[a] * op[b] == op[c] || (float)op[a] / op[b] == op[c])
@@ -20,5 +20,5 @@ char const **number_fun(unsigned n, unsigned input[n][3])
         else
             sprintf(result[i], "Impossible");
     }
-    return (char const **)result;
+    return (char const**)result;
 }

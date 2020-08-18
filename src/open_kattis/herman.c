@@ -1,13 +1,12 @@
 #include <stdio.h>
-#include <stdlib.h>
 
 #include "herman.h"
 
-#define PI 3.141592653589793
+static double const PI = 3.141592653589793;
 
-double *herman(int r)
+double* herman(int r)
 {
-    double *result = malloc(2 * sizeof(double));
+    static double result[2];
 
     result[0] = r * PI * r;
     result[1] = (r + r) * r;

@@ -2,7 +2,7 @@
 
 #include "death_knight_hero.h"
 
-int death_knight_hero(int n, const char **abilities)
+int death_knight_hero(int n, char const* abilities[n])
 {
     int wins = n;
 
