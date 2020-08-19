@@ -1,0 +1,29 @@
+name: Test
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+jobs:
+  unit:
+    name: unit test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup python
+        uses: actions/setup-python@v1
+
+      - name: Checkout project
+        uses: actions/checkout@v2
+
+      - name: Build and test
+        uses: BSFishy/meson-build@v1.0.1
+        with:
+          action: test
+          directory: build
+          setup-options: -Db_coverage=true
+          options: --verbose
+          meson-version: 0.53.2
+          ninja-version: 1.9.0.post1
+          gcovr-version: 4.2
