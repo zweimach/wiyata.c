@@ -2,7 +2,7 @@ project('wiyata',
     'c',
     version : '0.0.0',
     license: 'MIT',
-    subproject_dir: 'lib',
+    subproject_dir: 'third-party',
     default_options: ['c_std=c11', 'default_library=static']
 )
 
