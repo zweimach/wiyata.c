@@ -1,4 +1,5 @@
 subdir('codeforces')
+subdir('codewars')
 subdir('leetcode')
 subdir('open_kattis')
 subdir('tlx_toki')
