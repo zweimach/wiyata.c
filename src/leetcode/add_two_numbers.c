@@ -73,4 +73,3 @@ int list_node_val(struct ListNode* l)
 {
     return l ? l->val : 0;
 }
-

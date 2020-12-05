@@ -1,3 +1,4 @@
+subdir('advent_of_code')
 subdir('codeforces')
 subdir('codewars')
 subdir('leetcode')
