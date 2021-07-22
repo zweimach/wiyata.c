@@ -1,0 +1,6 @@
+#ifndef WIYATA_CODEWARS_ALTERNATE_CASE_H
+#define WIYATA_CODEWARS_ALTERNATE_CASE_H
+
+char* alternateCase(char* string);
+
+#endif /* WIYATA_CODEWARS_ALTERNATE_CASE_H */
