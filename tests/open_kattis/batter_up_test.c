@@ -12,7 +12,7 @@ static void first_test(void** state)
     (void)state;
 
     int input[] = {3, 0, 2};
-    double result = batter_up(input, 3);
+    double result = batter_up(3, input);
     assert_float_equal(result, 1.6666666666666667, 0);
 }
 
@@ -21,7 +21,7 @@ static void second_test(void** state)
     (void)state;
 
     int input[] = {1, -1, 4};
-    double result = batter_up(input, 3);
+    double result = batter_up(3, input);
     assert_float_equal(result, 2.5, 0);
 }
 
@@ -30,7 +30,7 @@ static void third_test(void** state)
     (void)state;
 
     int input[] = {-1, -1, -1, -1, 0, 0, 0, 0, 0, 0, 1};
-    double result = batter_up(input, 11);
+    double result = batter_up(11, input);
     assert_float_equal(result, 0.14285714285714285, 0);
 }
 

@@ -25,10 +25,11 @@ char const** quick_brown_fox(int n, char const* input[n])
         }
         if (missing) {
             result[i] = malloc(sizeof(char) * (9 + 26));
-            sprintf(result[i], "missing ");
+            int buffer_length = sprintf(result[i], "missing ");
             for (int m = 0; m < 26; m++) {
                 if (!pangram[m]) {
-                    sprintf(result[i], "%s%c", result[i], m + 97);
+                    buffer_length +=
+                        sprintf(result[i] + buffer_length, "%c", m + 97);
                 }
             }
         } else {
