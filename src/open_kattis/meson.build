@@ -80,6 +80,14 @@ dep_herman = declare_dependency(
     link_with: lib_herman,
     include_directories: includes)
 
+lib_knapsack = library('knapsack',
+    sources: 'knapsack.c',
+    dependencies: dep_m)
+
+dep_knapsack = declare_dependency(
+    link_with: lib_knapsack,
+    include_directories: includes)
+
 lib_number_fun = library('number_fun',
     sources: 'number_fun.c')
 

@@ -64,6 +64,12 @@ test_herman = executable('herman_test',
 
 test('open_kattis herman', test_herman)
 
+test_knapsack = executable('knapsack_test',
+    sources: 'knapsack_test.c',
+    dependencies: [dep_cmocka, dep_knapsack])
+
+test('open_kattis knapsack', test_knapsack)
+
 test_number_fun = executable('number_fun_test',
     sources: 'number_fun_test.c',
     dependencies: [dep_cmocka, dep_number_fun])
