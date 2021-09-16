@@ -1,0 +1,6 @@
+#ifndef WIYATA_LEETCODE_LONGEST_SUBSTRING
+#define WIYATA_LEETCODE_LONGEST_SUBSTRING
+
+int lengthOfLongestSubstring(char* s);
+
+#endif /* WIYATA_LEETCODE_LONGEST_SUBSTRING */
