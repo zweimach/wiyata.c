@@ -7,6 +7,13 @@ dep_alternate_case = declare_dependency(
     link_with: lib_alternate_case,
     include_directories: includes)
 
+lib_consecutive_strings = library('consecutive_strings',
+    sources: 'consecutive_strings.c')
+
+dep_consecutive_strings = declare_dependency(
+    link_with: lib_consecutive_strings,
+    include_directories: includes)
+
 lib_n_th_power = library('n-th_power',
     sources: 'n-th_power.c',
     dependencies: dep_m)

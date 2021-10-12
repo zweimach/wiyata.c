@@ -4,6 +4,12 @@ test_alternate_case = executable('alternate_case_test',
 
 test('codewars alternate_case', test_alternate_case)
 
+test_consecutive_strings = executable('consecutive_strings_test',
+    sources: 'consecutive_strings_test.c',
+    dependencies: [dep_cmocka, dep_consecutive_strings])
+
+test('codewars consecutive_strings', test_consecutive_strings)
+
 test_n_th_power = executable('n-th_power_test',
     sources: 'n-th_power_test.c',
     dependencies: [dep_cmocka, dep_n_th_power])

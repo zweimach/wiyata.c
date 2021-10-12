@@ -20,3 +20,10 @@ lib_reverse_integer = library('reverse_integer',
 dep_reverse_integer = declare_dependency(
     link_with: lib_reverse_integer,
     include_directories: includes)
+
+lib_string_to_integer = library('string_to_integer',
+    sources: 'string_to_integer.c')
+
+dep_string_to_integer = declare_dependency(
+    link_with: lib_string_to_integer,
+    include_directories: includes)

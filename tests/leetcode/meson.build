@@ -15,3 +15,9 @@ test_reverse_integer = executable('reverse_integer_test',
     dependencies: [dep_cmocka, dep_reverse_integer])
 
 test('leetcode reverse_integer', test_reverse_integer)
+
+test_string_to_integer = executable('string_to_integer_test',
+    sources: 'string_to_integer_test.c',
+    dependencies: [dep_cmocka, dep_string_to_integer])
+
+test('leetcode string_to_integer', test_string_to_integer)

@@ -1,0 +1,6 @@
+#ifndef WIYATA_CODEWARS_CONSECUTIVE_STRINGS_H
+#define WIYATA_CODEWARS_CONSECUTIVE_STRINGS_H
+
+char* longestConsec(char* strarr[], int n, int k);
+
+#endif /* WIYATA_CODEWARS_CONSECUTIVE_STRINGS_H */
