@@ -4,6 +4,12 @@ test_alternate_case = executable('alternate_case_test',
 
 test('codewars alternate_case', test_alternate_case)
 
+test_bouncing_balls = executable('bouncing_balls_test',
+    sources: 'bouncing_balls_test.c',
+    dependencies: [dep_cmocka, dep_bouncing_balls])
+
+test('codewars bouncing_balls', test_bouncing_balls)
+
 test_consecutive_strings = executable('consecutive_strings_test',
     sources: 'consecutive_strings_test.c',
     dependencies: [dep_cmocka, dep_consecutive_strings])
@@ -15,6 +21,12 @@ test_how_much = executable('how_much_test',
     dependencies: [dep_cmocka, dep_how_much])
 
 test('codewars how_much', test_how_much)
+
+test_maximum_length_difference = executable('maximum_length_difference_test',
+    sources: 'maximum_length_difference_test.c',
+    dependencies: [dep_cmocka, dep_maximum_length_difference])
+
+test('codewars maximum_length_difference', test_maximum_length_difference)
 
 test_n_th_power = executable('n-th_power_test',
     sources: 'n-th_power_test.c',

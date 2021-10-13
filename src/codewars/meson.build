@@ -7,6 +7,13 @@ dep_alternate_case = declare_dependency(
     link_with: lib_alternate_case,
     include_directories: includes)
 
+lib_bouncing_balls = library('bouncing_balls',
+    sources: 'bouncing_balls.c')
+
+dep_bouncing_balls = declare_dependency(
+    link_with: lib_bouncing_balls,
+    include_directories: includes)
+
 lib_consecutive_strings = library('consecutive_strings',
     sources: 'consecutive_strings.c')
 
@@ -23,6 +30,13 @@ lib_how_much = library('how_much',
 
 dep_how_much = declare_dependency(
     link_with: lib_how_much,
+    include_directories: includes)
+
+lib_maximum_length_difference = library('maximum_length_difference',
+    sources: 'maximum_length_difference.c')
+
+dep_maximum_length_difference = declare_dependency(
+    link_with: lib_maximum_length_difference,
     include_directories: includes)
 
 dep_n_th_power = declare_dependency(
