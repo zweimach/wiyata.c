@@ -18,6 +18,13 @@ lib_n_th_power = library('n-th_power',
     sources: 'n-th_power.c',
     dependencies: dep_m)
 
+lib_how_much = library('how_much',
+    sources: 'how_much.c')
+
+dep_how_much = declare_dependency(
+    link_with: lib_how_much,
+    include_directories: includes)
+
 dep_n_th_power = declare_dependency(
     link_with: lib_n_th_power,
     include_directories: includes)
@@ -35,6 +42,13 @@ lib_reverse_list_recursively = library('reverse_list_recursively',
 
 dep_reverse_list_recursively = declare_dependency(
     link_with: lib_reverse_list_recursively,
+    include_directories: includes)
+
+lib_sorted_yes_no_how = library('sorted_yes_no_how',
+    sources: 'sorted_yes_no_how.c')
+
+dep_sorted_yes_no_how = declare_dependency(
+    link_with: lib_sorted_yes_no_how,
     include_directories: includes)
 
 lib_string_repeat = library('string_repeat',

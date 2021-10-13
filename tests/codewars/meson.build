@@ -10,6 +10,12 @@ test_consecutive_strings = executable('consecutive_strings_test',
 
 test('codewars consecutive_strings', test_consecutive_strings)
 
+test_how_much = executable('how_much_test',
+    sources: 'how_much_test.c',
+    dependencies: [dep_cmocka, dep_how_much])
+
+test('codewars how_much', test_how_much)
+
 test_n_th_power = executable('n-th_power_test',
     sources: 'n-th_power_test.c',
     dependencies: [dep_cmocka, dep_n_th_power])
@@ -27,6 +33,12 @@ test_reverse_list_recursively = executable('reverse_list_recursively_test',
     dependencies: [dep_cmocka, dep_reverse_list_recursively])
 
 test('codewars reverse_list_recursively', test_reverse_list_recursively)
+
+test_sorted_yes_no_how = executable('sorted_yes_no_how_test',
+    sources: 'sorted_yes_no_how_test.c',
+    dependencies: [dep_cmocka, dep_sorted_yes_no_how])
+
+test('codewars sorted_yes_no_how', test_sorted_yes_no_how)
 
 test_string_repeat = executable('string_repeat_test',
     sources: 'string_repeat_test.c',
