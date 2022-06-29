@@ -15,3 +15,6 @@ trim_trailing_whitespace = false
 
 [*.{json,yml,yaml}]
 indent_size = 2
+
+[.clang-{format,tidy}]
+indent_size = 2
