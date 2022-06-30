@@ -12,9 +12,14 @@ project('wiyata',
 )
 
 cc = meson.get_compiler('c')
-dep_m = cc.find_library('m', required : false)
+dep_m = cc.find_library('m', required: false)
 
 dep_cmocka = dependency('cmocka', fallback: ['cmocka', 'cmocka_dep'])
 
-subdir('src')
-subdir('tests')
+subdir('advent_of_code')
+subdir('codeforces')
+subdir('codewars')
+subdir('hacker_rank')
+subdir('leetcode')
+subdir('open_kattis')
+subdir('tlx_toki')

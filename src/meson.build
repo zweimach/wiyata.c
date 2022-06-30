@@ -1,7 +1,0 @@
-subdir('advent_of_code')
-subdir('codeforces')
-subdir('codewars')
-subdir('hacker_rank')
-subdir('leetcode')
-subdir('open_kattis')
-subdir('tlx_toki')
