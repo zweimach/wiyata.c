@@ -3,7 +3,12 @@ project('wiyata',
     version : '0.0.0',
     license: 'MIT',
     subproject_dir: 'third-party',
-    default_options: ['c_std=c11', 'default_library=static']
+    default_options: [
+        'c_std=c11',
+        'default_library=static',
+        'warning_level=2',
+        'werror=true',
+    ],
 )
 
 cc = meson.get_compiler('c')
