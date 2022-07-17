@@ -16,7 +16,7 @@ enum Ord {
     GT = 1,
 };
 
-char* isSortedAndHow(int* array, int arrayLength)
+char* isSortedAndHow(int const* array, int arrayLength)
 {
     char* result = calloc(sizeof(char), 16);
     enum Method method = UNDEF;
@@ -27,11 +27,8 @@ char* isSortedAndHow(int* array, int arrayLength)
                                                   : EQ;
         if (method == UNDEF) {
             method = next == LT ? DESC : ASC;
-        } else if (next == GT && method == ASC) {
-            continue;
-        } else if (next == LT && method == DESC) {
-            continue;
-        } else if (next == EQ) {
+        } else if ((next == GT && method == ASC)
+                   || (next == LT && method == DESC) || next == EQ) {
             continue;
         } else {
             method = UNORD;

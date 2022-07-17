@@ -1,6 +1,6 @@
 #include "perang_dunia_ketiga.h"
 
-unsigned perang_dunia_ketiga(unsigned n, unsigned input[n])
+unsigned perang_dunia_ketiga(unsigned n, unsigned const input[n])
 {
     unsigned result = 0;
     long min_power = 1;

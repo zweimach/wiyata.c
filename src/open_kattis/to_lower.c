@@ -12,7 +12,7 @@ int to_lower(char*** str_list, int cases, int data)
     for (int i = 0; i < cases; i++) {
         bool true_case = true;
         for (int j = 0; j < data; j++) {
-            for (int k = 1; k < strlen(str_list[i][j]); k++) {
+            for (unsigned k = 1; k < strlen(str_list[i][j]); k++) {
                 if (!islower(str_list[i][j][k])) {
                     true_case = false;
                 }

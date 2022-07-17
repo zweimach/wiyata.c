@@ -8,7 +8,7 @@ char const** nasty_hacks(unsigned n, unsigned input[n][3])
     enum { r, e, c };
     char** result = malloc(sizeof(char*) * n);
 
-    for (int i = 0; i < n; i++) {
+    for (unsigned i = 0; i < n; i++) {
         result[i] = malloc(sizeof(char) * 18);
         if (input[i][r] + input[i][c] < input[i][e])
             sprintf(result[i], "advertise");

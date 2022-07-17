@@ -6,6 +6,10 @@
 
 char* longestConsec(char* strarr[], int n, int k)
 {
+    if (n == 0) {
+        return calloc(sizeof(char), 1);
+    }
+
     unsigned start = 0, max = 0;
     unsigned* lenarr = malloc(sizeof(unsigned) * n);
 
@@ -25,10 +29,6 @@ char* longestConsec(char* strarr[], int n, int k)
         }
     }
     free(lenarr);
-
-    if (max < 1) {
-        return calloc(sizeof(char), 1);
-    }
 
     char* longest = calloc(sizeof(char), max + 1);
     for (int i = 0, buffer_length = 0; i < k; i++) {

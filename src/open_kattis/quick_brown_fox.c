@@ -13,7 +13,7 @@ char const** quick_brown_fox(int n, char const* input[n])
     for (int i = 0; i < n; i++) {
         bool pangram[] = {[25] = false};
         bool missing = false;
-        for (int j = 0; j < strlen(input[i]); j++) {
+        for (unsigned j = 0; j < strlen(input[i]); j++) {
             if (isalpha(input[i][j])) {
                 pangram[toupper(input[i][j]) - 65] = true;
             }

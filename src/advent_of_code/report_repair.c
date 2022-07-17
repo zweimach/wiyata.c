@@ -7,7 +7,7 @@ static int const SUM = 2020;
 
 int compare(void const* p1, void const* p2)
 {
-    return *(unsigned*)(p1) - *(unsigned*)(p2);
+    return *(int*)(p1) - *(int*)(p2);
 }
 
 unsigned report_repair(unsigned n, unsigned input[n])

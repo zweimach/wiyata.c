@@ -30,7 +30,7 @@ struct ListNode* list_node_new(int n, int l[n])
 {
     struct ListNode* result = NULL;
 
-    for (unsigned i = 0; i < n; i++) {
+    for (int i = 0; i < n; i++) {
         result = list_node_append(result, l[i]);
     }
     return result;

@@ -12,7 +12,7 @@ static void first_test(void** state)
 {
     (void)state;
 
-    char const* const names[0] = {};
+    char const* const names[] = {0};
     char* expected = "no one likes this";
     char* submitted = likes(0, names);
     assert_string_equal(expected, submitted);

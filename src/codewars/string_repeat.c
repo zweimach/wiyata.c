@@ -3,7 +3,7 @@
 
 #include "string_repeat.h"
 
-char* repeat_str(size_t count, const char* src)
+char* repeat_str(size_t count, char const* src)
 {
     size_t size = strlen(src) * count;
     char* result = malloc(size * sizeof(char) + 1);

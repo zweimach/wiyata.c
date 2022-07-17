@@ -2,7 +2,7 @@
 
 #include "rocket_equation.h"
 
-unsigned rocket_equation(unsigned n, unsigned a[n])
+unsigned rocket_equation(unsigned n, unsigned const a[n])
 {
     unsigned s = 0;
     for (unsigned i = 0; i < n; i++)
@@ -10,11 +10,13 @@ unsigned rocket_equation(unsigned n, unsigned a[n])
     return s;
 }
 
-unsigned rocket_equation_part_two(unsigned n, unsigned a[n])
+unsigned rocket_equation_part_two(unsigned n, unsigned const a[n])
 {
-    int s = 0;
-    for (int i = 0, t = a[i]; i < n; i++, t = a[i])
+    unsigned s = 0;
+    for (unsigned i = 0; i < n; i++) {
+        int t = a[i];
         while ((t = floor((double)t / 3) - 2) >= 0)
             s += t;
+    }
     return s;
 }

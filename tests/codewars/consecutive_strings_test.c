@@ -37,7 +37,7 @@ static void third_test(void** state)
 {
     (void)state;
 
-    char* input[] = {};
+    char* input[] = {0};
     char* result = longestConsec(input, 0, 3);
     assert_string_equal(result, "");
     free(result);

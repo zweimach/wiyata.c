@@ -4,7 +4,7 @@
 
 #include "reorder.h"
 
-char const* reorder(unsigned n, unsigned a[n], unsigned m)
+char const* reorder(unsigned n, unsigned const a[n], unsigned m)
 {
     unsigned r = 0;
 

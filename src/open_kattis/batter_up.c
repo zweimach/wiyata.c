@@ -1,6 +1,6 @@
 #include "batter_up.h"
 
-double batter_up(int n, int batters[n])
+double batter_up(int n, int const batters[n])
 {
     int r = 0, u = 0;
 

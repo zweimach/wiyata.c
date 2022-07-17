@@ -6,7 +6,7 @@
 
 char const* fizzbuzz(int x, int y, int n)
 {
-    char* result = malloc(n * 10 * sizeof(char));
+    char* result = malloc((size_t)n * 10 * sizeof(char));
     result[0] = '\0';
 
     for (int m = 1; m <= n; m++) {
@@ -17,7 +17,7 @@ char const* fizzbuzz(int x, int y, int n)
         } else if (m % y == 0) {
             strcat(result, "Buzz\n");
         } else {
-            char str[4];
+            char str[12] = {0};
             sprintf(str, "%d\n", m);
             strcat(result, str);
         }

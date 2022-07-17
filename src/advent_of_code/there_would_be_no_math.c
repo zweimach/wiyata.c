@@ -5,7 +5,7 @@
 
 static int compare(void const* p1, void const* p2)
 {
-    return *(unsigned*)(p1) - *(unsigned*)(p2);
+    return *(int*)(p1) - *(int*)(p2);
 }
 
 unsigned there_would_be_no_math(unsigned n, char const* s[n])

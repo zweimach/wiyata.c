@@ -1,6 +1,6 @@
 #include "bijele.h"
 
-int* bijele(int input[6])
+int* bijele(int const input[6])
 {
     static int const pieces[6] = {1, 1, 2, 2, 2, 8};
     static int result[6] = {0};

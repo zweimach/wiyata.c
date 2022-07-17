@@ -3,7 +3,7 @@
 
 #include "pot.h"
 
-long pot(int p[], int n)
+long pot(int const p[], int n)
 {
     unsigned a, b;
     long x = 0;

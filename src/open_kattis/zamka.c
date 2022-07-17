@@ -2,7 +2,7 @@
 
 #include "zamka.h"
 
-unsigned sum_of_digits(int value)
+unsigned sum_of_digits(unsigned value)
 {
     if (value == 0) {
         return 0;
@@ -16,7 +16,7 @@ unsigned* zamka(unsigned min, unsigned max, unsigned target)
     unsigned* arr = malloc(sizeof(unsigned) * max);
     unsigned* result = malloc(sizeof(unsigned) * 2);
 
-    for (int i = min; i <= max; i++) {
+    for (unsigned i = min; i <= max; i++) {
         unsigned sod = sum_of_digits(i);
         if (sod == target) {
             arr[index] = i;

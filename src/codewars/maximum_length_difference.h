@@ -3,9 +3,9 @@
 
 #include <stddef.h>
 
-int mxdiflg(const char** firstArray,
+int mxdiflg(char const** firstArray,
             size_t firstArrayLength,
-            const char** secondArray,
+            char const** secondArray,
             size_t secondArrayLength);
 
 #endif /* WIYATA_CODEWARS_MAXIMUM_LENGTH_DIFFERENCE_H */
