@@ -1,0 +1,8 @@
+#ifndef WIYATA_LEETCODE_PALINDROME_NUMBER
+#define WIYATA_LEETCODE_PALINDROME_NUMBER
+
+#include <stdbool.h>
+
+bool isPalindrome(int x);
+
+#endif /* WIYATA_LEETCODE_PALINDROME_NUMBER */
