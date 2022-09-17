@@ -1,5 +1,3 @@
-#include <stdio.h>
-
 #include "herman.h"
 
 static double const PI = 3.141592653589793;

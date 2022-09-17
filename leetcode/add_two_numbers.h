@@ -1,5 +1,5 @@
-#ifndef WIYATA_LEETCODE_ADD_TWO_NUMBER_H
-#define WIYATA_LEETCODE_ADD_TWO_NUMBER_H
+#ifndef WIYATA_LEETCODE_ADD_TWO_NUMBER
+#define WIYATA_LEETCODE_ADD_TWO_NUMBER
 
 #include <stdbool.h>
 
@@ -16,15 +16,13 @@ void list_node_free(struct ListNode* l);
 
 struct ListNode* list_node_append(struct ListNode* l, int val);
 
-bool list_node_valid(struct ListNode* l);
+#define list_node_next(l) ((l) && (l)->next ? (l)->next : NULL)
 
-struct ListNode* list_node_next(struct ListNode* l);
-
-int list_node_val(struct ListNode* l);
+#define list_node_val(l) ((l) ? (l)->val : 0)
 
 #define list_node_create(...)                            \
     list_node_new(sizeof((int[]){__VA_ARGS__})           \
                       / sizeof((int[]){__VA_ARGS__}[0]), \
                   (int[]){__VA_ARGS__})
 
-#endif /* WIYATA_LEETCODE_ADD_TWO_NUMBER_H */
+#endif /* WIYATA_LEETCODE_ADD_TWO_NUMBER */

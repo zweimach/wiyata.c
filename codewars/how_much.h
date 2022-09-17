@@ -1,6 +1,6 @@
-#ifndef WIYATA_CODEWARS_HOW_MUCH_H
-#define WIYATA_CODEWARS_HOW_MUCH_H
+#ifndef WIYATA_CODEWARS_HOW_MUCH
+#define WIYATA_CODEWARS_HOW_MUCH
 
 char* howmuch(int m, int n);
 
-#endif /* WIYATA_CODEWARS_HOW_MUCH_H */
+#endif /* WIYATA_CODEWARS_HOW_MUCH */

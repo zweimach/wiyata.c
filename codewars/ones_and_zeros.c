@@ -1,5 +1,4 @@
 #include <math.h>
-#include <stdio.h>
 
 #include "ones_and_zeros.h"
 

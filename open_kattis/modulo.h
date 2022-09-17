@@ -1,6 +1,6 @@
-#ifndef WIYATA_OPEN_KATTIS_MODULO_H
-#define WIYATA_OPEN_KATTIS_MODULO_H
+#ifndef WIYATA_OPEN_KATTIS_MODULO
+#define WIYATA_OPEN_KATTIS_MODULO
 
 unsigned modulo(unsigned const input[10]);
 
-#endif /* WIYATA_OPEN_KATTIS_MODULO_H */
+#endif /* WIYATA_OPEN_KATTIS_MODULO */

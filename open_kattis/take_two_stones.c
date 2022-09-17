@@ -1,5 +1,3 @@
-#include <stdio.h>
-
 #include "take_two_stones.h"
 
 char const* take_two_stones(int stones)

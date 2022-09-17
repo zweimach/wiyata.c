@@ -1,6 +1,5 @@
 #include <limits.h>
 #include <stdbool.h>
-#include <stdio.h>
 
 #include "best_time_to_buy_and_sell_stock.h"
 

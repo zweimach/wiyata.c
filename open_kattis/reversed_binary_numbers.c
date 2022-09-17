@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include <string.h>
 
 #include "reversed_binary_numbers.h"

@@ -48,7 +48,6 @@ static void sixth_test(void** state)
     assert_int_equal(maxProfit((int[]){2, 4, 1, 7, 11}, 5), 10);
 }
 
-
 int main()
 {
     struct CMUnitTest const tests[] = {cmocka_unit_test(first_test),

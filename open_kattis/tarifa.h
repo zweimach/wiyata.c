@@ -1,6 +1,6 @@
-#ifndef WIYATA_OPEN_KATTIS_TARIFA_H
-#define WIYATA_OPEN_KATTIS_TARIFA_H
+#ifndef WIYATA_OPEN_KATTIS_TARIFA
+#define WIYATA_OPEN_KATTIS_TARIFA
 
-int tarifa(int x, int n, int* p);
+int tarifa(int x, int n, int const* p);
 
-#endif /* WIYATA_OPEN_KATTIS_TARIFA_H */
+#endif /* WIYATA_OPEN_KATTIS_TARIFA */

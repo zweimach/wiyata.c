@@ -1,5 +1,4 @@
 #include <stdbool.h>
-#include <stdio.h>
 #include <stdlib.h>
 
 #include "add_two_numbers.h"
@@ -62,14 +61,4 @@ struct ListNode* list_node_append(struct ListNode* l, int val)
         p->next = n;
     }
     return l;
-}
-
-struct ListNode* list_node_next(struct ListNode* l)
-{
-    return l && l->next ? l->next : NULL;
-}
-
-int list_node_val(struct ListNode* l)
-{
-    return l ? l->val : 0;
 }

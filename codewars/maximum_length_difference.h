@@ -1,5 +1,5 @@
-#ifndef WIYATA_CODEWARS_MAXIMUM_LENGTH_DIFFERENCE_H
-#define WIYATA_CODEWARS_MAXIMUM_LENGTH_DIFFERENCE_H
+#ifndef WIYATA_CODEWARS_MAXIMUM_LENGTH_DIFFERENCE
+#define WIYATA_CODEWARS_MAXIMUM_LENGTH_DIFFERENCE
 
 #include <stddef.h>
 
@@ -8,4 +8,4 @@ int mxdiflg(char const** firstArray,
             char const** secondArray,
             size_t secondArrayLength);
 
-#endif /* WIYATA_CODEWARS_MAXIMUM_LENGTH_DIFFERENCE_H */
+#endif /* WIYATA_CODEWARS_MAXIMUM_LENGTH_DIFFERENCE */

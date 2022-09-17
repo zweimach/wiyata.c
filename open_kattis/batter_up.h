@@ -1,6 +1,6 @@
-#ifndef WIYATA_OPEN_KATTIS_BATTER_UP_H
-#define WIYATA_OPEN_KATTIS_BATTER_UP_H
+#ifndef WIYATA_OPEN_KATTIS_BATTER_UP
+#define WIYATA_OPEN_KATTIS_BATTER_UP
 
 double batter_up(int n, int const batters[n]);
 
-#endif /* WIYATA_OPEN_KATTIS_BATTER_UP_H */
+#endif /* WIYATA_OPEN_KATTIS_BATTER_UP */

@@ -1,5 +1,3 @@
-#include <stdio.h>
-
 #include "restoran_chanek.h"
 
 int restoran_chanek(int cooks, int foods, int const duration[cooks * foods])

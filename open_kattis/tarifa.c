@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "tarifa.h"
 
 int tarifa(int x, int n, int const* p)
 {

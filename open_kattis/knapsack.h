@@ -1,5 +1,5 @@
-#ifndef WIYATA_OPEN_KATTIS_KNAPSACK_H
-#define WIYATA_OPEN_KATTIS_KNAPSACK_H
+#ifndef WIYATA_OPEN_KATTIS_KNAPSACK
+#define WIYATA_OPEN_KATTIS_KNAPSACK
 
 struct Item {
     unsigned value;
@@ -25,4 +25,4 @@ struct Result* result_append(struct Result* r, struct Item* it, unsigned i);
 
 void result_free(struct Result* r);
 
-#endif /* WIYATA_OPEN_KATTIS_KNAPSACK_H */
+#endif /* WIYATA_OPEN_KATTIS_KNAPSACK */
