@@ -1,146 +1,109 @@
-includes = include_directories('.')
+alternate_case_test = executable('alternate_case_test',
+    sources: [
+        'alternate_case.c',
+        'alternate_case_test.c',
+    ],
+    dependencies: [cmocka_dep],
+)
 
-lib_alternate_case = library('alternate_case',
-    sources: 'alternate_case.c')
+test('codewars alternate_case', alternate_case_test)
 
-dep_alternate_case = declare_dependency(
-    link_with: lib_alternate_case,
-    include_directories: includes)
+bouncing_balls_test = executable('bouncing_balls_test',
+    sources: [
+        'bouncing_balls.c',
+        'bouncing_balls_test.c',
+    ],
+    dependencies: [cmocka_dep],
+)
 
-lib_bouncing_balls = library('bouncing_balls',
-    sources: 'bouncing_balls.c')
+test('codewars bouncing_balls', bouncing_balls_test)
 
-dep_bouncing_balls = declare_dependency(
-    link_with: lib_bouncing_balls,
-    include_directories: includes)
+consecutive_strings_test = executable('consecutive_strings_test',
+    sources: [
+        'consecutive_strings.c',
+        'consecutive_strings_test.c',
+    ],
+    dependencies: [cmocka_dep],
+)
 
-lib_consecutive_strings = library('consecutive_strings',
-    sources: 'consecutive_strings.c')
+test('codewars consecutive_strings', consecutive_strings_test)
 
-dep_consecutive_strings = declare_dependency(
-    link_with: lib_consecutive_strings,
-    include_directories: includes)
+how_much_test = executable('how_much_test',
+    sources: [
+        'how_much.c',
+        'how_much_test.c',
+    ],
+    dependencies: [cmocka_dep],
+)
 
-lib_n_th_power = library('n-th_power',
-    sources: 'n-th_power.c',
-    dependencies: dep_m)
+test('codewars how_much', how_much_test)
 
-lib_how_much = library('how_much',
-    sources: 'how_much.c')
+maximum_length_difference_test = executable('maximum_length_difference_test',
+    sources: [
+        'maximum_length_difference.c',
+        'maximum_length_difference_test.c',
+    ],
+    dependencies: [cmocka_dep],
+)
 
-dep_how_much = declare_dependency(
-    link_with: lib_how_much,
-    include_directories: includes)
+test('codewars maximum_length_difference', maximum_length_difference_test)
 
-lib_maximum_length_difference = library('maximum_length_difference',
-    sources: 'maximum_length_difference.c')
+n_th_power_test = executable('n-th_power_test',
+    sources: [
+        'n-th_power.c',
+        'n-th_power_test.c',
+    ],
+    dependencies: [m_dep, cmocka_dep],
+)
 
-dep_maximum_length_difference = declare_dependency(
-    link_with: lib_maximum_length_difference,
-    include_directories: includes)
+test('codewars n-th_power', n_th_power_test)
 
-dep_n_th_power = declare_dependency(
-    link_with: lib_n_th_power,
-    include_directories: includes)
+ones_and_zeros_test = executable('ones_and_zeros_test',
+    sources: [
+        'ones_and_zeros.c',
+        'ones_and_zeros_test.c',
+    ],
+    dependencies: [m_dep, cmocka_dep],
+)
 
-lib_ones_and_zeros = library('ones_and_zeros',
-    sources: 'ones_and_zeros.c',
-    dependencies: dep_m)
+test('codewars ones_and_zeros', ones_and_zeros_test)
 
-dep_ones_and_zeros = declare_dependency(
-    link_with: lib_ones_and_zeros,
-    include_directories: includes)
+reverse_list_recursively_test = executable('reverse_list_recursively_test',
+    sources: [
+        'reverse_list_recursively.c',
+        'reverse_list_recursively_test.c',
+    ],
+    dependencies: [cmocka_dep],
+)
 
-lib_reverse_list_recursively = library('reverse_list_recursively',
-    sources: 'reverse_list_recursively.c')
+test('codewars reverse_list_recursively', reverse_list_recursively_test)
 
-dep_reverse_list_recursively = declare_dependency(
-    link_with: lib_reverse_list_recursively,
-    include_directories: includes)
+sorted_yes_no_how_test = executable('sorted_yes_no_how_test',
+    sources: [
+        'sorted_yes_no_how.c',
+        'sorted_yes_no_how_test.c',
+    ],
+    dependencies: [cmocka_dep],
+)
 
-lib_sorted_yes_no_how = library('sorted_yes_no_how',
-    sources: 'sorted_yes_no_how.c')
+test('codewars sorted_yes_no_how', sorted_yes_no_how_test)
 
-dep_sorted_yes_no_how = declare_dependency(
-    link_with: lib_sorted_yes_no_how,
-    include_directories: includes)
+string_repeat_test = executable('string_repeat_test',
+    sources: [
+        'string_repeat.c',
+        'string_repeat_test.c',
+    ],
+    dependencies: [cmocka_dep],
+)
 
-lib_string_repeat = library('string_repeat',
-    sources: 'string_repeat.c')
+test('codewars string_repeat', string_repeat_test)
 
-dep_string_repeat = declare_dependency(
-    link_with: lib_string_repeat,
-    include_directories: includes)
+who_likes_it_test = executable('who_likes_it_test',
+    sources: [
+        'who_likes_it.c',
+        'who_likes_it_test.c',
+    ],
+    dependencies: [cmocka_dep],
+)
 
-lib_who_likes_it = library('who_likes_it',
-    sources: 'who_likes_it.c')
-
-dep_who_likes_it = declare_dependency(
-    link_with: lib_who_likes_it,
-    include_directories: includes)
-
-test_alternate_case = executable('alternate_case_test',
-    sources: 'alternate_case_test.c',
-    dependencies: [dep_cmocka, dep_alternate_case])
-
-test('codewars alternate_case', test_alternate_case)
-
-test_bouncing_balls = executable('bouncing_balls_test',
-    sources: 'bouncing_balls_test.c',
-    dependencies: [dep_cmocka, dep_bouncing_balls])
-
-test('codewars bouncing_balls', test_bouncing_balls)
-
-test_consecutive_strings = executable('consecutive_strings_test',
-    sources: 'consecutive_strings_test.c',
-    dependencies: [dep_cmocka, dep_consecutive_strings])
-
-test('codewars consecutive_strings', test_consecutive_strings)
-
-test_how_much = executable('how_much_test',
-    sources: 'how_much_test.c',
-    dependencies: [dep_cmocka, dep_how_much])
-
-test('codewars how_much', test_how_much)
-
-test_maximum_length_difference = executable('maximum_length_difference_test',
-    sources: 'maximum_length_difference_test.c',
-    dependencies: [dep_cmocka, dep_maximum_length_difference])
-
-test('codewars maximum_length_difference', test_maximum_length_difference)
-
-test_n_th_power = executable('n-th_power_test',
-    sources: 'n-th_power_test.c',
-    dependencies: [dep_cmocka, dep_n_th_power])
-
-test('codewars n-th_power', test_n_th_power)
-
-test_ones_and_zeros = executable('ones_and_zeros_test',
-    sources: 'ones_and_zeros_test.c',
-    dependencies: [dep_cmocka, dep_ones_and_zeros])
-
-test('codewars ones_and_zeros', test_ones_and_zeros)
-
-test_reverse_list_recursively = executable('reverse_list_recursively_test',
-    sources: 'reverse_list_recursively_test.c',
-    dependencies: [dep_cmocka, dep_reverse_list_recursively])
-
-test('codewars reverse_list_recursively', test_reverse_list_recursively)
-
-test_sorted_yes_no_how = executable('sorted_yes_no_how_test',
-    sources: 'sorted_yes_no_how_test.c',
-    dependencies: [dep_cmocka, dep_sorted_yes_no_how])
-
-test('codewars sorted_yes_no_how', test_sorted_yes_no_how)
-
-test_string_repeat = executable('string_repeat_test',
-    sources: 'string_repeat_test.c',
-    dependencies: [dep_cmocka, dep_string_repeat])
-
-test('codewars string_repeat', test_string_repeat)
-
-test_who_likes_it = executable('who_likes_it_test',
-    sources: 'who_likes_it_test.c',
-    dependencies: [dep_cmocka, dep_who_likes_it])
-
-test('codewars who_likes_it', test_who_likes_it)
+test('codewars who_likes_it', who_likes_it_test)

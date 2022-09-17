@@ -1,5 +1,4 @@
-project('wiyata',
-    'c',
+project('wiyata', 'c',
     version : '0.0.0',
     license: 'MIT',
     subproject_dir: 'third-party',
@@ -12,9 +11,9 @@ project('wiyata',
 )
 
 cc = meson.get_compiler('c')
-dep_m = cc.find_library('m', required: false)
+m_dep = cc.find_library('m', required: false)
 
-dep_cmocka = dependency('cmocka', fallback: ['cmocka', 'cmocka_dep'])
+cmocka_dep = dependency('cmocka')
 
 subdir('advent_of_code')
 subdir('codeforces')

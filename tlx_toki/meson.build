@@ -1,27 +1,19 @@
-includes = include_directories('.')
+perang_dunia_ketiga_test = executable('perang_dunia_ketiga_test',
+    sources: [
+        'perang_dunia_ketiga.c',
+        'perang_dunia_ketiga_test.c',
+    ],
+    dependencies: [cmocka_dep],
+)
 
-lib_perang_dunia_ketiga = library('perang_dunia_ketiga',
-    sources: 'perang_dunia_ketiga.c')
+test('tlx_toki perang_dunia_ketiga', perang_dunia_ketiga_test)
 
-dep_perang_dunia_ketiga = declare_dependency(
-    link_with: lib_perang_dunia_ketiga,
-    include_directories: includes)
+restoran_chanek_test = executable('restoran_chanek_test',
+    sources: [
+        'restoran_chanek.c',
+        'restoran_chanek_test.c',
+    ],
+    dependencies: [cmocka_dep],
+)
 
-lib_restoran_chanek = library('restoran_chanek',
-    sources: 'restoran_chanek.c')
-
-dep_restoran_chanek = declare_dependency(
-    link_with: lib_restoran_chanek,
-    include_directories: includes)
-
-test_perang_dunia_ketiga = executable('perang_dunia_ketiga_test',
-    sources: 'perang_dunia_ketiga_test.c',
-    dependencies: [dep_cmocka, dep_perang_dunia_ketiga])
-
-test('tlx_toki perang_dunia_ketiga', test_perang_dunia_ketiga)
-
-test_restoran_chanek = executable('restoran_chanek_test',
-    sources: 'restoran_chanek_test.c',
-    dependencies: [dep_cmocka, dep_restoran_chanek])
-
-test('tlx_toki restoran_chanek', test_restoran_chanek)
+test('tlx_toki restoran_chanek', restoran_chanek_test)

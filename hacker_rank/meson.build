@@ -1,27 +1,19 @@
-includes = include_directories('.')
+counting_valleys_test = executable('counting_valleys_test',
+    sources: [
+        'counting_valleys.c',
+        'counting_valleys_test.c',
+    ],
+    dependencies: [cmocka_dep],
+)
 
-lib_counting_valleys = library('counting_valleys',
-    sources: 'counting_valleys.c')
+test('hacker_rank counting_valleys', counting_valleys_test)
 
-dep_counting_valleys = declare_dependency(
-    link_with: lib_counting_valleys,
-    include_directories: includes)
+prime_or_not_test = executable('prime_or_not_test',
+    sources: [
+        'prime_or_not.c',
+        'prime_or_not_test.c',
+    ],
+    dependencies: [cmocka_dep],
+)
 
-lib_prime_or_not = library('prime_or_not',
-    sources: 'prime_or_not.c')
-
-dep_prime_or_not = declare_dependency(
-    link_with: lib_prime_or_not,
-    include_directories: includes)
-
-test_counting_valleys = executable('counting_valleys_test',
-    sources: 'counting_valleys_test.c',
-    dependencies: [dep_cmocka, dep_counting_valleys])
-
-test('hacker_rank counting_valleys', test_counting_valleys)
-
-test_prime_or_not = executable('prime_or_not_test',
-    sources: 'prime_or_not_test.c',
-    dependencies: [dep_cmocka, dep_prime_or_not])
-
-test('hacker_rank prime_or_not', test_prime_or_not)
+test('hacker_rank prime_or_not', prime_or_not_test)

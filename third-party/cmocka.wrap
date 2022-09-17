@@ -1,10 +1,12 @@
 [wrap-file]
 directory = cmocka-1.1.5
-
 source_url = https://cmocka.org/files/1.1/cmocka-1.1.5.tar.xz
 source_filename = cmocka-1.1.5.tar.xz
 source_hash = f0ccd8242d55e2fd74b16ba518359151f6f8383ff8aef4976e48393f77bba8b6
+patch_filename = cmocka_1.1.5-5_patch.zip
+patch_url = https://wrapdb.mesonbuild.com/v2/cmocka_1.1.5-5/get_patch
+patch_hash = e380083690849bb1abf231c42c684ec39a2dd1180c42d348b672ae6924b188d0
+wrapdb_version = 1.1.5-5
 
-patch_url = https://wrapdb.mesonbuild.com/v1/projects/cmocka/1.1.5/1/get_zip
-patch_filename = cmocka-1.1.5-1-wrap.zip
-patch_hash = 6295d58dae1c040d113ef0c249e9f4a783cfecf9b57fc665717743158bcca46c
+[provide]
+cmocka = cmocka_dep
