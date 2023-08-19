@@ -28,6 +28,16 @@ first_bad_version_test = executable('first_bad_version_test',
 
 test('leetcode first_bad_version', first_bad_version_test)
 
+flood_fill_test = executable('flood_fill_test',
+    sources: [
+        'flood_fill.c',
+        'flood_fill_test.c',
+    ],
+    dependencies: [cmocka_dep],
+)
+
+test('leetcode flood_fill', flood_fill_test)
+
 longest_substring_test = executable('longest_substring_test',
     sources: [
         'longest_substring.c',
@@ -48,6 +58,16 @@ merge_two_sorted_lists_test = executable('merge_two_sorted_lists_test',
 
 test('leetcode merge_two_sorted_lists', merge_two_sorted_lists_test)
 
+number_of_islands_test = executable('number_of_islands_test',
+    sources: [
+        'number_of_islands.c',
+        'number_of_islands_test.c',
+    ],
+    dependencies: [cmocka_dep],
+)
+
+test('leetcode number_of_islands', number_of_islands_test)
+
 palindrome_number_test = executable('palindrome_number_test',
     sources: [
         'palindrome_number.c',
@@ -67,6 +87,16 @@ reverse_integer_test = executable('reverse_integer_test',
 )
 
 test('leetcode reverse_integer', reverse_integer_test)
+
+reverse_linked_list_test = executable('reverse_linked_list_test',
+    sources: [
+        'reverse_linked_list.c',
+        'reverse_linked_list_test.c',
+    ],
+    dependencies: [cmocka_dep],
+)
+
+test('leetcode reverse_linked_list', reverse_linked_list_test)
 
 string_to_integer_test = executable('string_to_integer_test',
     sources: [
