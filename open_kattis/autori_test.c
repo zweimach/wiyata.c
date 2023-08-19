@@ -25,7 +25,7 @@ static void test_three_names(void** state)
     free((void*)result);
 }
 
-int main()
+int main(void)
 {
     struct CMUnitTest const tests[] = {cmocka_unit_test(test_two_names),
                                        cmocka_unit_test(test_three_names)};

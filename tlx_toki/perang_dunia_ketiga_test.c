@@ -41,7 +41,7 @@ static void test_many_invasions(void** state)
     }
 }
 
-int main()
+int main(void)
 {
     struct CMUnitTest const tests[] = {cmocka_unit_test(test_two_invasions),
                                        cmocka_unit_test(test_three_invasions),

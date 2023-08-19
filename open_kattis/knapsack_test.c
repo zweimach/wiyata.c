@@ -85,7 +85,7 @@ static void third_test(void** state)
     result_free(result);
 }
 
-int main()
+int main(void)
 {
     struct CMUnitTest const tests[] = {cmocka_unit_test(first_test),
                                        cmocka_unit_test(second_test),

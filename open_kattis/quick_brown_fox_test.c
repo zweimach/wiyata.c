@@ -26,7 +26,7 @@ static void first_test(void** state)
     free((void*)result);
 }
 
-int main()
+int main(void)
 {
     struct CMUnitTest const tests[] = {cmocka_unit_test(first_test)};
 

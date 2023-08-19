@@ -136,7 +136,7 @@ static void fourth_test(void** state)
     assert_int_equal(result, 1771);
 }
 
-int main()
+int main(void)
 {
     struct CMUnitTest const tests[] = {cmocka_unit_test(first_test),
                                        cmocka_unit_test(second_test),

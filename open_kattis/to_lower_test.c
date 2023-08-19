@@ -30,7 +30,7 @@ static void test_three_data(void** state)
     assert_int_equal(result, 3);
 }
 
-int main()
+int main(void)
 {
     struct CMUnitTest const tests[] = {cmocka_unit_test(test_two_data),
                                        cmocka_unit_test(test_three_data)};

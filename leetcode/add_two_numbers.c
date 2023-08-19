@@ -3,7 +3,7 @@
 
 #include "add_two_numbers.h"
 
-struct ListNode* add_two_numbers(struct ListNode* l1, struct ListNode* l2)
+struct ListNode* addTwoNumbers(struct ListNode* l1, struct ListNode* l2)
 {
     struct ListNode* result = NULL;
     bool carry = false;

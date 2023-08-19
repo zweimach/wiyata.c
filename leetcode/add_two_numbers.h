@@ -8,7 +8,7 @@ struct ListNode {
     struct ListNode* next;
 };
 
-struct ListNode* add_two_numbers(struct ListNode* l1, struct ListNode* l2);
+struct ListNode* addTwoNumbers(struct ListNode* l1, struct ListNode* l2);
 
 struct ListNode* list_node_new(int n, int l[n]);
 

@@ -14,7 +14,7 @@ static void first_test(void** state)
     struct ListNode* input[] = {list_node_create(2, 4, 3),
                                 list_node_create(5, 6, 4)};
     struct ListNode* expected = list_node_create(7, 0, 8);
-    struct ListNode* result = add_two_numbers(input[0], input[1]);
+    struct ListNode* result = addTwoNumbers(input[0], input[1]);
     for (struct ListNode *r = result, *e = expected; e;
          r = r->next, e = e->next) {
         assert_int_equal(r->val, e->val);
@@ -31,7 +31,7 @@ static void second_test(void** state)
 
     struct ListNode* input[] = {list_node_create(0), list_node_create(0)};
     struct ListNode* expected = list_node_create(0);
-    struct ListNode* result = add_two_numbers(input[0], input[1]);
+    struct ListNode* result = addTwoNumbers(input[0], input[1]);
     for (struct ListNode *r = result, *e = expected; e;
          r = r->next, e = e->next) {
         assert_int_equal(r->val, e->val);
@@ -50,7 +50,7 @@ static void third_test(void** state)
                                 list_node_create(9, 9, 9, 9)};
     struct ListNode* expected =
         list_node_new(8, (int[]){8, 9, 9, 9, 0, 0, 0, 1});
-    struct ListNode* result = add_two_numbers(input[0], input[1]);
+    struct ListNode* result = addTwoNumbers(input[0], input[1]);
     for (struct ListNode *r = result, *e = expected; e;
          r = r->next, e = e->next) {
         assert_int_equal(r->val, e->val);
@@ -68,7 +68,7 @@ static void fourth_test(void** state)
     struct ListNode* input[] = {list_node_create(1, 9, 9, 9, 9, 9, 9, 9, 9),
                                 list_node_create(9)};
     struct ListNode* expected = list_node_create(0, 0, 0, 0, 0, 0, 0, 0, 0, 1);
-    struct ListNode* result = add_two_numbers(input[0], input[1]);
+    struct ListNode* result = addTwoNumbers(input[0], input[1]);
     for (struct ListNode *r = result, *e = expected; e;
          r = r->next, e = e->next) {
         assert_int_equal(r->val, e->val);
@@ -79,7 +79,7 @@ static void fourth_test(void** state)
     list_node_free(result);
 }
 
-int main()
+int main(void)
 {
     struct CMUnitTest const tests[] = {cmocka_unit_test(first_test),
                                        cmocka_unit_test(second_test),

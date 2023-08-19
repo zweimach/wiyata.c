@@ -34,7 +34,7 @@ static void test_many_foods(void** state)
     assert_int_equal(result, 75);
 }
 
-int main()
+int main(void)
 {
     struct CMUnitTest const tests[] = {cmocka_unit_test(test_three_foods),
                                        cmocka_unit_test(test_four_foods),

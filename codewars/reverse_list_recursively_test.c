@@ -32,7 +32,7 @@ static void third_test(void** state)
     assert_true(!memcmp(result, (int[]){6, 5, 4, 3, 2, 1}, 6 * sizeof(int)));
 }
 
-int main()
+int main(void)
 {
     struct CMUnitTest const tests[] = {cmocka_unit_test(first_test),
                                        cmocka_unit_test(second_test),

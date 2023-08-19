@@ -5,8 +5,9 @@ project('wiyata', 'c',
     default_options: [
         'c_std=c11',
         'default_library=static',
-        'warning_level=2',
+        'warning_level=3',
         'werror=true',
+        'c_args="-Wno-overlength-strings"'
     ],
 )
 

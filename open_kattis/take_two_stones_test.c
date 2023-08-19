@@ -23,7 +23,7 @@ static void second_test(void** state)
     assert_string_equal(result, "Alice");
 }
 
-int main()
+int main(void)
 {
     struct CMUnitTest const tests[] = {cmocka_unit_test(first_test),
                                        cmocka_unit_test(second_test)};
